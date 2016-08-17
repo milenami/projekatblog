@@ -8,6 +8,21 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= yield %>
+     <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "Turizam u Srbiji", '#', id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Šta posetiti?",   wheretogo_path %></li>
+            <li><%= link_to "Izletišta",   whattoseeanddo_path %></li>
+            <li><%= link_to "Gde odsedati", wheretostay_path %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+
   </body>
 </html>
